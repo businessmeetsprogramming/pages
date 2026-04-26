@@ -1,8 +1,13 @@
+---
+layout: default
+title: 13F Follower — Final Summary
+---
+
 # 13F Follower — Final Project Summary
 
 **Date**: 2026-04-26
 **Status**: Phase 1 (13F-only data) closed. Strategy locked: **V18 50/50 (V13 + V17b-1)**.
-**Headline**: Avg held-out α = **+9.15pp/yr**, Bootstrap 95% CI on OOS Sharpe **[0.30, 2.58]**, Full OOS Sharpe **1.26**.
+**Headline (post Bug #7 nested CV)**: Avg unbiased held-out α = **+8.78pp/yr** (V18 fixed config = +9.15pp; shrinkage -0.37pp ✓ V18 passes Bug #7 audit). Bootstrap 95% CI on OOS Sharpe **[0.30, 2.58]**, Full OOS Sharpe **1.26**.
 
 ---
 
@@ -33,16 +38,19 @@ Each quarter, ranks all 13F filers (≥12 quarters of history) by trailing 4-yea
 
 ### 1.2 Performance under proper held-out methodology
 
-| Metric | V18 alone | Note |
+| Metric | V18 | Note |
 |---|---|---|
-| Avg held-out α (rolling 10-window V57 framework) | **+9.15pp/yr** | unbiased |
+| **V18 fixed config (current spec)** held-out α | **+9.15pp/yr** | grid-tuned, biased |
+| **V18 nested CV (V85, post Bug #7 audit)** held-out α | **+8.78pp/yr** ✓ | unbiased; Δ -0.37pp shrinkage from fixed |
+| **Forward expectation** | **+8.78pp/yr** | use this for kill-criterion calibration |
 | Held-out 2024-2025 single window Sharpe | 1.44 | |
 | Full OOS 2021-2025 Sharpe | 1.26 | |
-| 16-year IS+OOS Sharpe | 0.91 | **forward expectation** |
+| 16-year IS+OOS Sharpe | 0.91 | calibrate forward Sharpe to ~0.9 |
 | Bootstrap 95% CI on Full OOS Sharpe | [0.30, 2.58] | lower bound > 0 ✓ |
 | Worst single year | -8.7pp (V13 alone 2014) | acceptable |
 | V13 random null | p < 0.01 | ✓ |
 | V13/V17b sleeve correlation | 0.65 | moderate diversification |
+| **V18 nested CV W/T/L vs V18 fixed** | 3/0/7 | fixed config slightly outperforms in 7/10 windows but average Δ is small |
 
 ### 1.3 Bug #7 — the final one (2026-04-26)
 
@@ -63,6 +71,16 @@ This is the same family of bug as #2 (V26 OOS-peek) and #6 (correlated dud varia
 Nested CV picks **8 different V62 configs across 10 windows** — IS+TUNE Sharpe has near-zero power to identify the right V62 hyperparameters ex-ante.
 
 **Random null (V84, 500 trials)**: At fixed V62a config, IR ranking beats random fund selection p=0.018. So V62a config has real signal — but you can't pick it ex-ante. **V62 sleeve is therefore not deployable.**
+
+**V18 own nested CV check (V85)**: same Bug #7 audit applied to V13 (32-config grid) × V17b-1 (72-config grid) × 5 mix weights. Per held-out window, inner-grid select on IS+TUNE Sharpe only.
+
+| | Avg held-out α | shrinkage |
+|---|---|---|
+| V18 fixed config | +9.15pp | — |
+| V18 nested CV (unbiased) | **+8.78pp** | **-0.37pp** ✓ |
+| V62 nested CV (comparison) | +4.83pp | -8.71pp ❌ |
+
+V18 shrinks 0.37pp; V62 shrinks 8.71pp. **The 23x ratio is the difference between structural alpha and selection bias.** V18 PASSES Bug #7 audit and is genuinely deployable.
 
 ### 1.4 The 7-bug ledger
 
@@ -106,7 +124,7 @@ The "+Sharpe 2.0" target was never real — every breakthrough that broke the 1.
 ## 2. Deployment Plan
 
 ### Phase 0 — Pre-launch (week of 2026-05-12)
-- Run V85 nested CV on V18 hyperparameters (verify V18 itself doesn't have Bug #7 risk — expected shrinkage 1-3pp)
+- ✅ V85 nested CV on V18 — DONE 2026-04-26 — V18 passes Bug #7 audit at -0.37pp shrinkage
 - Generate next-quarter positions for R = 2025-12-31 (or 2025-09-30 if not fully filed)
 - Lock strategy spec; verify positions look reasonable (mega-cap concentrated, no Carvana-style lottery)
 
@@ -132,8 +150,8 @@ The held-out 2024-2025 Sharpe of 1.44 is the WIDE single-window estimate. **The 
 
 ## 3. Next Steps
 
-### 3.1 Immediate: V85 — V18 nested CV (must do before deploy)
-Apply V83-style nested CV to V13/V17b-1 hyperparameters (top_n, K, port_wt threshold). If +9.15pp shrinks below +3pp, halt and reassess. Expected modest shrinkage 1-3pp because the V18 grid was small (~5-10 configs), V13 has independent random null pass (p<0.01), and V18 was locked early without held-out iteration.
+### 3.1 ~~Immediate: V85 — V18 nested CV~~ DONE (2026-04-26)
+V85 ran nested CV on the V13 32-config × V17b-1 72-config × 5-weight grid. Result: V18 unbiased held-out α = **+8.78pp** (vs V18 fixed +9.15pp; shrinkage -0.37pp). V18 PASSES Bug #7 audit. Forward expectation locked at **+8.78pp/yr / ~0.9 Sharpe**.
 
 ### 3.2 Phase 2 research direction (post-deploy, parallel)
 
@@ -148,14 +166,21 @@ Apply V83-style nested CV to V13/V17b-1 hyperparameters (top_n, K, port_wt thres
 
 **Recommended start**: Form 4 buys-only parser. Insider buys are the strongest single signal in the literature (Lakonishok-Lee 2001, Cohen-Malloy-Pomorski 2012). 9.4M Form 4 filings already indexed; only the parser is missing.
 
-### 3.3 Why "small-cap" is hard (lesson learned)
+### 3.3 Why "small-cap" is hard from 13F (lesson learned)
 
-The user's instinct to find a small-cap edge was sound — but every attempt failed:
-- **Universe too noisy**: small-cap 13F holdings are rare, distress-prone, and prone to reverse splits / delistings (Bug #4 / Bug #1 hit small-cap hardest).
-- **Selection bias amplified**: small-cap returns are fatter-tailed, so any grid-search-on-held-out (Bug #5/#6/#7) finds spurious "winners" much more easily.
-- **No fund-skill signal in 13F**: the IR-ranking step at fixed V62a config has p=0.018 (real), but you can't identify V62a from IS+TUNE alone (V83 finding). Specialist funds' edge is too thin to survive the data noise.
+The instinct to find a small-cap edge was sound — but every attempt under 13F-only data failed:
 
-**Conclusion: small-cap follower strategies are not viable from 13F-only data.** This isn't a failure of the small-cap thesis itself — it's a data limitation. Form 4 (insider) buys-only and 13D activist filings might find small-cap signal because those data sources have better signal-to-noise on small-cap names than 13F snapshots.
+| Failure mode | Mechanism |
+|---|---|
+| **Universe too noisy** | small-cap 13F holdings are rare, distress-prone, prone to reverse splits / delistings — Bug #4 / Bug #1 hit small-cap hardest |
+| **Selection bias amplified** | small-cap returns are fat-tailed, so any grid-search-on-held-out (Bug #5/#6/#7) finds spurious "winners" much more easily |
+| **No fund-skill signal in 13F** | IR-ranking at fixed V62a config has p=0.018 (real), but you can't identify V62a from IS+TUNE alone (V83 finding). Specialist funds' edge is too thin to survive the data noise |
+| **Quarter-end snapshot** | small-cap fund flows during the quarter are invisible; we only see the residual at quarter-end |
+| **45-day reporting lag** | small-cap catalysts are often priced-in within 45d; following at R+45 is too late |
+
+**Conclusion: small-cap follower strategies are not viable from 13F-only data.** This isn't a failure of the small-cap thesis — it's a data limitation. Form 4 insider buys-only and 13D activist filings have better signal-to-noise on small-cap names because those data sources reflect direct conviction (insider buying their own stock; activist taking 5%+ stake) rather than residual quarter-end positioning.
+
+Academic precedents: Cohen-Malloy-Pomorski (2012) finds insider buys have 2-3× the alpha in small-caps vs large-caps; Coffee (2022) and Boyson-Mooradian (2023) find wolf-pack 13D (2+ activists ≤90d) preserves alpha post-2010 while single-activist 13D has decayed. Our V75 wolf-pack 13D attempt was promising but failed under rolling test — possibly a hyperparameter issue (Bug #7 risk), worth revisiting with proper nested CV after the Form 4 parser is built.
 
 ### 3.4 Process improvements going forward
 
