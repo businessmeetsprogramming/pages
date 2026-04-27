@@ -1,3 +1,9 @@
+# ⚠️ V153 PBO Confirms — V18 + V146-best Fixed Weight IS Real Phase 2 (SUPERSEDED by V155)
+
+> **🚫 SUPERSEDED 2026-04-27 (late PM):** This page's PBO=0.163 figure was inflated. CSCV/PBO does not purge label overlap created by the 180-day hold. **V154 added explicit purge bands and PBO climbed to 0.429–0.571 — borderline to fail.** V155 then showed that shorter holds (60–90d) don't rescue the signal — solo Sharpe collapses to noise level. **See [V155 — CPCV Honest Verdict](v155-cpcv-honest-verdict).** Page kept below for the historical record.
+
+---
+
 # 🎯 V153 PBO Confirms — V18 + V146-best Fixed Weight IS Real Phase 2
 
 **Date**: 2026-04-27 PM (post industry-standard audit)
