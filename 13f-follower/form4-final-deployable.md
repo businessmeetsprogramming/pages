@@ -76,6 +76,18 @@ Statistical significance:
 
 PERFECT W/L across every robustness layer.
 
+### Walk-forward yearly (non-overlapping, V119)
+
+| Aggregation | STRICT | Baseline ≥3 |
+|---|---|---|
+| All 11 yrs Δ | **+17.27pp (8/3)** | +15.69pp (6/5) |
+| Drop 2019/2020 | +20.95pp (7/2) | +15.10pp |
+| **Drop 2017-2020** | **+15.11pp (6/1)** | +11.94pp (4/3) |
+
+STRICT wins MORE yearly windows than baseline ≥3 — confirms stricter cluster is more reliable.
+
+**2024 STRICT solo +111%, V18+STRICT +52% (held-out)**: most recent year is biggest absolute win.
+
 ### Year-by-year (continuous, 11 years)
 
 | Year | V18 | STRICT solo | SPY | Note |
