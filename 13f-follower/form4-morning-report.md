@@ -198,17 +198,21 @@ Top names in sector 01: **Capital One, Charles Schwab, ICE, Interactive Brokers,
 
 ---
 
-## Forward Expectation Calibration
+## Forward Expectation Calibration (V115 Cost Analysis)
 
-Backtest ≠ live. Apply haircut to backtest numbers:
+| Round-trip cost | Drop-COVID Δ | SuperStruct Δ | W/L (SST) |
+|---|---|---|---|
+| 0bp (frictionless) | +12.28pp | +7.53pp | 6/0 |
+| 50bp (large-cap low) | +11.23pp | +6.60pp | 6/0 |
+| **100bp (typical)** | +10.25pp | **+5.76pp** | 5/1 |
+| **200bp (realistic micro)** | +8.18pp | **+3.91pp** | 5/1 |
+| 500bp (worst case) | +1.48pp | +0.86pp | 3/3 |
 
-| Source | Forward expectation |
-|---|---|
-| V18 alone | ~+8pp/yr (consistent with 16-yr 0.91 IS Sharpe) |
-| Form 4 micro-cap solo | ~+10pp/yr after slippage (vs +30-60pp backtest avg) |
-| Combined V18 + MicroF4 | **~+12-15pp/yr realistic, Sharpe ~1.3** |
+**Realistic forward expectation** (after 100-200bp slippage):
+- Conservative: V18 + STRICT delivers **+4-6pp Δ over V18** = **+12-14pp total α/yr**
+- Sharpe expected: ~1.3-1.5 (vs 1.62 backtest)
 
-Backtest +21.4pp / Sharpe 1.63 is upper bound assuming zero transaction cost.
+**Execution requirements**: VWAP/algo orders, position limit ≤0.5% of name's daily volume, focus on top-quartile micro-cap liquidity. Avoid stocks with bid-ask >5%.
 
 ---
 
