@@ -88,6 +88,17 @@ STRICT wins MORE yearly windows than baseline ≥3 — confirms stricter cluster
 
 **2024 STRICT solo +111%, V18+STRICT +52% (held-out)**: most recent year is biggest absolute win.
 
+### V120 — Finer mcap reveals Goldilocks Zone
+
+| mcap | Events | SST Δ | W/L |
+|---|---|---|---|
+| nano <$50M, ≥3 | 106 | -6.5pp | 0/6 ❌ (too illiquid) |
+| micro <$100M, ≥3 | 342 | +4.0pp | 3/3 |
+| **$100M-$300M, ≥3** | 1,162 | **+12.00pp** | **6/0** ⭐ |
+| **micro <$300M, ≥5 (STRICT)** | 748 | **+7.53pp** | **6/0** ✓ |
+
+$100M-$300M zone has the highest SST Δ (+12pp) but is grid-search risk (Bug #7). STRICT remains the conservative deploy choice. Optional: tighten universe to $100M-$300M as V120 alternate spec for higher-AUM deployment ($10-100M capacity).
+
 ### Year-by-year (continuous, 11 years)
 
 | Year | V18 | STRICT solo | SPY | Note |
