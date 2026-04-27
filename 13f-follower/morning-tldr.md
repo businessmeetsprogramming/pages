@@ -65,6 +65,19 @@ Recent quarter-end (2026-03-31) signals:
 
 Realistic deployment: V18 + STRICT delivers **+12-15pp/yr after costs, Sharpe ~1.3-1.5**.
 
+## Regime Stability (V124)
+
+Signal works in all 4 regimes including most recent 2022-2024 (POST-CMP 2012 publication):
+
+| Era | Mix50 α | Mix50 Sharpe |
+|---|---|---|
+| 2010-2014 | +3.0pp | 1.02 |
+| 2015-2019 | +19.7pp | 1.31 |
+| 2020-2024 | +37.2pp | 2.18 |
+| **2022-2024 (most recent)** | **+23.6pp** | **2.20** ⭐ |
+
+NOT arbitraged away.
+
 ## Read Full Report
 
 - 📄 **[Final Deployable Spec](https://businessmeetsprogramming.github.io/pages/13f-follower/form4-final-deployable)**
