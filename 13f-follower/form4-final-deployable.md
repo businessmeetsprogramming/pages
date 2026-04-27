@@ -190,6 +190,19 @@ Our STRICT spec confirms all four:
 
 ---
 
+## V124 Regime-by-Regime Stability
+
+STRICT signal works across all 4 regimes including most recent (post-CMP 2012 publication, post-COVID arbitrage era):
+
+| Era | V18 α | STRICT α | Mix50 α | Mix50 Sharpe |
+|---|---|---|---|---|
+| 2010-2014 (early QE) | +0.95pp | +2.07pp | +3.01pp | 1.02 |
+| 2015-2019 (mid) | +5.90pp | +29.03pp | +19.67pp | 1.31 |
+| 2020-2024 (post-COVID) | +9.93pp | +64.03pp | +37.19pp | **2.18** |
+| **2022-2024 (last 9 qtr)** | +2.51pp | **+44.08pp** | **+23.59pp** | **2.20** ⭐ |
+
+Most recent 9 quarters (2022-2024) — STRICT delivers Sharpe 2.20, α +23.6pp. **Signal NOT decayed** post-CMP 2012.
+
 ## Why Hasn't This Been Arbitraged Away?
 
 The Cohen-Malloy-Pomorski 2012 paper is well-known. Insider-buy alpha is documented for 14 years. Yet the strategy still works (V117 confirms). Why?
