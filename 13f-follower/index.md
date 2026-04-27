@@ -26,8 +26,9 @@ V62 collapses by 8.71pp under nested CV. V18 collapses by only 0.37pp. **That ga
 
 ## Reports
 
-- 🏆 **[V3 FINAL — V18 + V140 Comprehensive Report](morning-final-v3)** — **DEPLOYABLE PHASE 2** (2026-04-27 PM, after 11 hypothesis tested)
-- 🏆 [V140 PERFECT W/L — V18 + Form 4 + Form 144 + 10b5-1](v140-perfect-wl) — V140 spec details. Sharpe 1.46, CAGR +31.2%, 10/0 W/L.
+- ⚠️ **[V146 UNIFIED Grid — V140 was Bug #7 partial bias](v146-honest-truth)** — **HONEST TRUTH** (2026-04-27 PM final audit). V140 claim shrunk 8.75pp under unified grid. V18 alone remains primary deployable.
+- 🏆 [V3 — V18 + V140 (PRE-AUDIT, OVERSTATED)](morning-final-v3) — superseded by V146
+- 🏆 [V140 PERFECT W/L (PRE-AUDIT)](v140-perfect-wl) — superseded by V146
 - 🚀 [V2 FINAL — V18 + V136 (superseded by V140)](morning-final-v2) — V136 = V140 without 10b5-1 filter
 - 🎯 [V136 Form 144 Reverse Filter Breakthrough](v136-form144-breakthrough) — original Form 144 finding
 - ⚠️ [V18+STRICT Bug Audit](v18-strict-bug-audit) — STRICT spec failed Bug #7 audit (2026-04-27 AM)
