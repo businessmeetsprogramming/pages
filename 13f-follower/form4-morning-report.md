@@ -28,6 +28,9 @@ After 16 iterations (V86-V103), pivoting through cluster-buy → first-buy → n
 | Sign-perm p (Full) | — | **0.0013** |
 | Sign-perm p (DropCOVID) | — | **0.0037** |
 | Sign-perm p (SST) | — | **0.0161** |
+| **Random null (V113, 200 trials) Full** | — | **p=0.035 (96th pct)** |
+| **Random null DropCOVID** | — | **p=0.010 (99th pct)** ⭐ |
+| **Random null SST** | — | **p=0.045 (96th pct)** |
 
 **ALL three subset CIs exclude zero**. Statistical significance achieved on Full + Drop-COVID; SuperStruct CI lower bound +3.42pp confirms structural alpha.
 
