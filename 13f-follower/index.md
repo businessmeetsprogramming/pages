@@ -26,7 +26,6 @@ V62 collapses by 8.71pp under nested CV. V18 collapses by only 0.37pp. **That ga
 
 ## Reports
 
-- 📓 **[Project Logbook — Full V0→V155 Journey](project-logbook)** — comprehensive writeup: theory, 8 bugs, strategy graveyard, methodology lessons, next-step options
 - 🔬 **[V146 Detail — What the Unified Grid Search Actually Did](v146-detail)** — 972-config grid, V140 sequential bias exposure, V146-best spec, CPCV strictness debate
 - 🏁 **[V155 — CPCV Honest Verdict (PROJECT CONVERGED)](v155-cpcv-honest-verdict)** — **FINAL** (2026-04-27 late PM). CPCV with leakage-matched purge reverses V153. V18+V146-best fails at PBO 0.43–0.57. Short-hold rescue collapses to noise. **V18 alone is the deployable answer.**
 - ⚠️ [V153 — V18+V146-best PBO 0.163 (SUPERSEDED by V155)](v153-real-phase2) — CSCV figure inflated by label leakage; reversed by CPCV
