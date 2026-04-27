@@ -158,11 +158,18 @@ Our STRICT spec confirms all four:
 ## Deployment Plan
 
 ### Phase 0 — Setup (2026-05)
-- [ ] Lock spec: `strategy_spec.yaml` with STRICT parameters
-- [ ] Build daily WRDS query: pull `tr_insiders.table1` for last 30 days
-- [ ] Implement event detection: rolling 30d window, ≥5 buyers, $50K net
-- [ ] Map issuer_cik → cusip, filter mcap <$300M from CRSP
-- [ ] Generate next-quarter target list
+- [x] Lock spec: STRICT (≥5 buyers, $50K net buy, 30d window, mcap<$300M, hold 180d)
+- [x] Build daily WRDS query (`v122_live_positions.py`): pull `tr_insiders.table1` for last 35 days
+- [x] Event detection: rolling 30d window, ≥5 buyers, $50K net
+- [x] Mcap filter via hp5 panel (latest report_date)
+- [x] **Live signal generator working** — sample outputs:
+
+| As Of | Triggers |
+|---|---|
+| 2026-04-26 (today) | KLTR Kaltura $215M, 5 buyers, $89K |
+| 2026-03-31 (last QE) | **SSP Scripps $183M, 20 buyers, $7.4M** + COFS, EML |
+| 2026-01-31 | IMRX Immuneering $217M, 5 buyers |
+| 2025-10-31 / 2025-07-31 | No triggers (selective) |
 
 ### Phase 1 — Paper trade (2026-05-15 → 2026-08-15, 1 quarter)
 - 100% paper, real prices
