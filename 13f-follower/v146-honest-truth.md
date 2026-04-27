@@ -57,3 +57,27 @@ V146 unified suggests there's *some* Phase 2 lift (+5pp super-struct) but not st
 Phase 2 alt-data search **definitively complete after 11 hypothesis × unified grid audit**. Form 4 + Form 144 + 10b5-1 + Quality combination shows weak structural alpha but cannot reject null.
 
 For deployment: **stick with V18 alone**. Optionally add small experimental V146-spec sleeve (~10-20% weight) to test live with low risk.
+
+---
+
+## V147 — Random Null on V146-best Fixed Spec
+
+Locked spec: micro<$300M + ≥3 buyers + $250K + positive_ROA + 180d hold (no f144, no 10b5-1).
+
+| Subset | Real Δ | Null Mean | Null Max | p-value |
+|---|---|---|---|---|
+| Full 10w | +7.31pp (8/2) | -0.02pp | +31.07pp | 0.080 |
+| Drop-COVID 8w | +3.91pp | -0.80pp | +19.30pp | 0.125 |
+| SST 6w | +7.55pp | +0.20pp | +29.89pp | 0.085 |
+
+**None reach α=0.05 significance.** Compared to V137 V136 random null which had p<0.001 — that was inflated by sequential bias.
+
+## Final Verdict
+
+Phase 2 alt-data alpha exists (~+3-5pp Drop-COVID over V18) but **NOT statistically significant** under proper unified-grid Bug #7 clean methodology + random null.
+
+**Deployable**: V18 alone (Sharpe 1.16, α +8.78pp, audit-clean).
+
+**Optional experimental sleeve** (10-20% allocation): V146-best fixed spec at small weight to test live with low risk. Forward expectation +1-3pp net of slippage.
+
+Do NOT deploy V18 + 50% V140 — that was the sequential bias illusion.
