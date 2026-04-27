@@ -142,6 +142,7 @@ Top names in sector 01: **Capital One, Charles Schwab, ICE, Interactive Brokers,
 | Random null (200 trials) | Real Δ +9.33pp vs null max +7.62pp, p<0.005 | ✓ |
 | **V114 Drawdown analysis** | **MaxDD -38.9% better than V18 -46.5%** | ✓ |
 | Year-by-year (2022/23/24) | STRICT wins all 3 most recent years | ✓ |
+| **V117 Pre-2014 OOS** | STRICT solo α +1.68pp in 2010-2013 (V18 had -0.85pp) | ✓ |
 | Bootstrap CI exclude 0 | All 3 subset CIs > 0 | ✓ |
 | Sign-perm p-test | Full p=0.0024, Drop-COVID p=0.0070, SST p=0.0301 | ✓ |
 | Recent year holds (2023-24) | +18.1pp lift, 2nd-largest in non-outlier set | ✓ |
