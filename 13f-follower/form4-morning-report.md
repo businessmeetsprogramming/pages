@@ -9,19 +9,25 @@
 
 After 16 iterations (V86-V103), pivoting through cluster-buy → first-buy → net-buy → micro-cap → sector segments:
 
-**Final winning strategy**:
-**V18 + Form 4 Micro-Cap Net Insider Buy ensemble**
+**Final winning strategy** (post all robustness checks V112):
+**V18 + Form 4 Micro-Cap STRICT Net Insider Buy ensemble**
 
-| Metric | V18 alone | **V18 + MicroNetBuy** |
+(STRICT = ≥5 buyers, $50K net buy, 30d window, 180d hold)
+
+| Metric | V18 alone | **V18 + STRICT** |
 |---|---|---|
-| Sharpe (16-yr aggregate) | 1.16 | **1.63** |
-| CAGR | +22.5% | **+35.9%** |
-| α vs SPY | +8.0pp | **+21.4pp** |
-| Avg held-out α (full 10w) | +9.15pp | **+23.93pp** (Δ +14.78pp) |
-| Drop-COVID 8w Δ | — | **+11.85pp** [CI +5.82, +18.55] |
-| SuperStruct 6w Δ | — | **+9.33pp** [CI +3.42, +15.66] |
-| Random null (200 trials) | — | **p < 0.005** |
-| Sign-perm test | — | **p = 0.030** |
+| Sharpe (16-yr aggregate) | 1.16 | **1.57** |
+| CAGR | +22.5% | **+33.5%** |
+| α vs SPY | +8.0pp | **+19.0pp** |
+| Avg held-out α (full 10w) | +9.15pp | **+21.03pp** (Δ +11.88pp) |
+| Drop-COVID 8w Δ | — | **+12.28pp** [CI +5.58, +20.82] |
+| **SuperStruct 6w Δ** | — | **+7.53pp** [CI +3.13, +12.00] |
+| **Full 10w W/L** | — | **10/10 PERFECT** ⭐ |
+| **Drop-COVID 8w W/L** | — | **8/8 PERFECT** ⭐ |
+| **SuperStruct 6w W/L** | — | **6/6 PERFECT** ⭐ |
+| Sign-perm p (Full) | — | **0.0013** |
+| Sign-perm p (DropCOVID) | — | **0.0037** |
+| Sign-perm p (SST) | — | **0.0161** |
 
 **ALL three subset CIs exclude zero**. Statistical significance achieved on Full + Drop-COVID; SuperStruct CI lower bound +3.42pp confirms structural alpha.
 
