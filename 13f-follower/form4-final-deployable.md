@@ -190,6 +190,16 @@ Our STRICT spec confirms all four:
 
 ---
 
+## Why Hasn't This Been Arbitraged Away?
+
+The Cohen-Malloy-Pomorski 2012 paper is well-known. Insider-buy alpha is documented for 14 years. Yet the strategy still works (V117 confirms). Why?
+
+1. **Capacity moat**: micro-cap (<$300M) deployment ceiling is $5-50M. Quant funds with >$1B AUM cannot trade this universe. Insider alpha doesn't disappear because the marginal arbitrageur is institutionally constrained.
+2. **STRICT refinement**: most academic backtests use ≥3 insiders. Our ≥5 cluster is rarer (748 events vs 1,510), captures stronger conviction signal that may not be commonly arbitraged.
+3. **180d hold is long**: typical hedge fund momentum strategies use 1-3 month holds. CMP showed alpha persists 12-18mo, but most funds can't tolerate the position turnover and drawdown profile.
+4. **Form 4 timing**: signal becomes public on filing date (often 1-2 days after transaction). Quant funds can act in 1-2ms; humans need hours; mid-frequency funds typically scan once per day. Our 30-day cluster aggregation captures slow-diffusion alpha.
+5. **Mega-cap fund focus**: quant funds optimize for capacity. Micro-cap is structurally underexploited.
+
 ## Risks
 
 1. **Liquidity ceiling**: $5-50M realistic deployment. Strategy doesn't scale to large funds.
