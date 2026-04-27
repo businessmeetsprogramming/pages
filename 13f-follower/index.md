@@ -26,9 +26,10 @@ V62 collapses by 8.71pp under nested CV. V18 collapses by only 0.37pp. **That ga
 
 ## Reports
 
-- 🆕 **[Form 4 FINAL Deployable Spec](form4-final-deployable)** — clean final report (2026-04-27). V18 + STRICT MicroNetBuy: Sharpe 1.62, α +19pp, perfect W/L 10/10 + 8/8 + 6/6.
-- [Form 4 Morning Report (full iteration log)](form4-morning-report) — V86-V117 iteration history (2026-04-27)
-- [Phase 1 Final Summary (13F-only, post Bug #7 audit)](final-summary) — V18 spec, 7-bug ledger (2026-04-26)
+- ⭐ **[🌅 Morning One-Pager TL;DR](morning-tldr)** — read this first (2026-04-27)
+- **[Form 4 FINAL Deployable Spec](form4-final-deployable)** — full strategy spec, robustness audit, deployment plan (2026-04-27)
+- [Form 4 Iteration Log V86-V120](form4-morning-report) — overnight research history (2026-04-27)
+- [Phase 1 Final Summary (13F-only, post Bug #7 audit)](final-summary) — V18 baseline, 7-bug ledger (2026-04-26)
 
 ## Full audit & validation chain
 
