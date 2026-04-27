@@ -26,7 +26,8 @@ V62 collapses by 8.71pp under nested CV. V18 collapses by only 0.37pp. **That ga
 
 ## Reports
 
-- [Final Project Summary (post Bug #7 audit)](final-summary) — comprehensive deployable spec, 7-bug ledger, 17 eliminated research directions, Phase 2 roadmap (2026-04-26)
+- 🆕 **[Form 4 Morning Report — Micro-Cap Net Insider Buy](form4-morning-report)** — Phase 2 BREAKTHROUGH (2026-04-27). V18 + MicroNetBuy ensemble: Sharpe 1.63, α +21.4pp, statistical significance achieved.
+- [Final Project Summary (post Bug #7 audit)](final-summary) — Phase 1 (13F-only) deployable spec, 7-bug ledger, 17 eliminated research directions (2026-04-26)
 
 ## Full audit & validation chain
 
