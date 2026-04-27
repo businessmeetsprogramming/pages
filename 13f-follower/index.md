@@ -26,11 +26,12 @@ V62 collapses by 8.71pp under nested CV. V18 collapses by only 0.37pp. **That ga
 
 ## Reports
 
-- 🚀 **[V2 FINAL — V18 + V136 Deployable](morning-final-v2)** — Phase 2 BREAKTHROUGH after Bug #7 audit (2026-04-27 PM). Sharpe 1.48, CAGR +31.3%, α +16.6pp.
-- 🎯 **[V136 Form 144 Reverse Filter Breakthrough](v136-form144-breakthrough)** — first Phase 2 signal passing day-1 nested CV
+- 🏆 **[V140 PERFECT W/L — V18 + Form 4 + Form 144 + 10b5-1](v140-perfect-wl)** — **CURRENT BEST** Phase 2 deployable (2026-04-27 PM). Sharpe 1.46, CAGR +31.2%, 10/0 W/L.
+- 🚀 [V2 FINAL — V18 + V136 (superseded by V140)](morning-final-v2) — V136 = V140 without 10b5-1 filter
+- 🎯 [V136 Form 144 Reverse Filter Breakthrough](v136-form144-breakthrough) — original Form 144 finding
 - ⚠️ [V18+STRICT Bug Audit](v18-strict-bug-audit) — STRICT spec failed Bug #7 audit (2026-04-27 AM)
-- [🌅 Morning One-Pager TL;DR (V1, pre-audit)](morning-tldr) — superseded by V2
-- [Form 4 FINAL Deployable Spec (V1, pre-audit)](form4-final-deployable) — superseded by V2
+- [🌅 Morning One-Pager TL;DR (V1, pre-audit)](morning-tldr) — superseded
+- [Form 4 FINAL Deployable Spec (V1, pre-audit)](form4-final-deployable) — superseded
 - [Form 4 Iteration Log V86-V124](form4-morning-report) — overnight research history
 - [Phase 1 Final Summary (13F-only)](final-summary) — V18 baseline, 7-bug ledger
 
