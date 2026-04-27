@@ -26,9 +26,10 @@ V62 collapses by 8.71pp under nested CV. V18 collapses by only 0.37pp. **That ga
 
 ## Reports
 
-- ⭐ **[🌅 Morning One-Pager TL;DR](morning-tldr)** — read this first (2026-04-27)
-- **[Form 4 FINAL Deployable Spec](form4-final-deployable)** — full strategy spec, robustness audit, deployment plan (2026-04-27)
-- [Form 4 Iteration Log V86-V120](form4-morning-report) — overnight research history (2026-04-27)
+- ⚠️ **[V18+STRICT Bug Audit](v18-strict-bug-audit)** — independent audit identifies Bug #7 risk in STRICT spec selection (2026-04-27)
+- **[🌅 Morning One-Pager TL;DR](morning-tldr)** — overnight research summary (2026-04-27)
+- **[Form 4 FINAL Deployable Spec](form4-final-deployable)** — strategy spec (claimed numbers, pre-audit) (2026-04-27)
+- [Form 4 Iteration Log V86-V124](form4-morning-report) — overnight research history (2026-04-27)
 - [Phase 1 Final Summary (13F-only, post Bug #7 audit)](final-summary) — V18 baseline, 7-bug ledger (2026-04-26)
 
 ## Full audit & validation chain
