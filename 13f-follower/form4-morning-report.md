@@ -27,20 +27,28 @@ After 16 iterations (V86-V103), pivoting through cluster-buy → first-buy → n
 
 ---
 
-## The Signal Specification
+## The Signal Specification (UPDATED — V111 PERFECT W/L)
 
 **Universe**: Stocks with mcap < $300M at filing date
 
 **Trigger condition** (in any rolling 30-day window):
-1. ≥3 unique insider personids file `trancode='P'` (open-market BUY)
+1. **≥5 unique insider personids file `trancode='P'`** (open-market BUY) — V111 tightening
 2. Net `(sum of P value_$) − (sum of S value_$) ≥ $50,000`
 3. Both conditions met simultaneously
 
 **Trade**:
 - Buy at filing-date + 1 (next trading day)
-- Hold 180 days
+- Hold **180 days** (V110 tested 60-540d; 180d picked for liquidity-realism. Longer holds give more α but multiple-counting concerns.)
 - Sell at filing-date + 181
-- Equal-weighted across all active events
+- **Equal-weighted** across all active events (V109 confirmed $-weight FAILS — count is the signal, not size)
+
+**Performance vs ≥3-buyer baseline**:
+| Config | Events | Full Δ | Drop-COVID | **SST Δ** | **W/L** |
+|---|---|---|---|---|---|
+| Baseline ≥3 buyers | 1,510 | +12.10pp | +9.96pp | +7.81pp | 5/1 |
+| **STRICT ≥5 buyers** | **748** | **+11.88pp (10/0)** | **+12.28pp (8/0)** | **+7.53pp (6/0)** ⭐ |
+
+Strict has PERFECT W/L record (6/0 SuperStruct, 8/0 Drop-COVID, 10/0 Full). Same alpha, fewer events, more reliable.
 
 **Combine with V18**: blend weight = 0.3-0.5 (median picked = 0.5 of total portfolio).
 Cash fallback when no events fire in trailing window.
@@ -126,6 +134,7 @@ Top names in sector 01: **Capital One, Charles Schwab, ICE, Interactive Brokers,
 | Bootstrap CI exclude 0 | All 3 subset CIs > 0 | ✓ |
 | Sign-perm p-test | Full p=0.0024, Drop-COVID p=0.0070, SST p=0.0301 | ✓ |
 | Recent year holds (2023-24) | +18.1pp lift, 2nd-largest in non-outlier set | ✓ |
+| **V104 Survivorship correction** | SST Δ shrinks +9.33pp → **+7.81pp** (1.5pp haircut, 5/1 preserved) | **✓** |
 | Sector concentration | Sector 01 (financials) drives most alpha — note caveat | ⚠ |
 
 ---
